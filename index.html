@@ -1,273 +1,58 @@
-<!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>resQ - Smart India Hackathon</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <style>
-        @keyframes radar-pulse {
-            0% { transform: scale(0.95); opacity: 0.8; }
-            50% { transform: scale(1.1); opacity: 0.3; }
-            100% { transform: scale(0.95); opacity: 0.8; }
-        }
-        .radar-pulse-ring {
-            transform-origin: center;
-            animation: radar-pulse 2s infinite ease-in-out;
-        }
-        .glow-card {
-            box-shadow: 0 0 20px -5px rgba(6, 182, 212, 0.15);
-        }
-    </style>
-</head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-cyan-500 selection:text-slate-950">
+          <!-- radar rings -->
+          <g transform="translate(6,6)">
+            <circle cx="22" cy="22" r="22" fill="none" stroke="rgba(6,182,212,0.08)" stroke-width="2" class="radar-pulse-ring" />
+            <circle cx="22" cy="22" r="15" fill="none" stroke="rgba(59,130,246,0.12)" stroke-width="2" />
+            <circle cx="22" cy="22" r="5" fill="#EF4444" class="animate-pulse" />
+            <circle cx="22" cy="22" r="3.5" fill="#fff" opacity="0.06"/>
+            <line x1="22" y1="0" x2="22" y2="44" stroke="#3B82F6" stroke-width="0.9" stroke-dasharray="2,3" opacity="0.45"/>
+            <line x1="0" y1="22" x2="44" y2="22" stroke="#06B6D4" stroke-width="0.9" stroke-dasharray="2,3" opacity="0.45"/>
+          </g>
+        </svg>
 
-    <!-- NAVBAR WITH ANIMATED LOGO -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-slate-950/80 backdrop-blur-md border-b border-slate-800/80 px-6 py-4 flex justify-between items-center">
-        
-        <!-- Animated Team Logo -->
-        <div class="flex items-center gap-3">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 260 65" class="h-10 w-auto">
-                <defs>
-                    <linearGradient id="resq-grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stop-color="#3B82F6" />
-                        <stop offset="100%" stop-color="#06B6D4" />
-                    </linearGradient>
-                </defs>
-                <g transform="translate(5, 5)">
-                    <circle cx="26" cy="26" r="22" fill="none" stroke="#06B6D4" stroke-width="1.5" class="radar-pulse-ring" />
-                    <circle cx="26" cy="26" r="15" fill="none" stroke="#3B82F6" stroke-width="2" />
-                    <circle cx="26" cy="26" r="5" fill="#EF4444" class="animate-ping" />
-                    <circle cx="26" cy="26" r="4" fill="#EF4444" />
-                    <line x1="26" y1="2" x2="26" y2="50" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="2,2" />
-                    <line x1="2" y1="26" x2="50" y2="26" stroke="#3B82F6" stroke-width="1.5" stroke-dasharray="2,2" />
-                </g>
-                <text x="70" y="38" font-family="sans-serif" font-weight="900" font-size="34" fill="url(#resq-grad)" letter-spacing="-1">res<tspan fill="#EF4444">Q</tspan></text>
-                <text x="72" y="52" font-family="sans-serif" font-weight="700" font-size="8" fill="#94A3B8" letter-spacing="2">DISASTER MITIGATION</text>
-            </svg>
+        <div class="leading-tight">
+          <div class="text-xl font-extrabold tracking-tight" style="line-height:1">
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300">res</span><span class="text-rose-400">Q</span>
+          </div>
+          <div class="text-[10px] text-slate-400 uppercase tracking-wider font-medium">Disaster Mitigation</div>
         </div>
+      </a>
+    </div>
 
-        <div class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-400">
-            <a href="#hero" class="hover:text-cyan-400 transition">Overview</a>
-            <a href="#challenges" class="hover:text-cyan-400 transition">Challenges & Gaps</a>
-            <a href="#solution" class="hover:text-cyan-400 transition">Solution</a>
-            <a href="#architecture" class="hover:text-cyan-400 transition">Tech Architecture</a>
-            <a href="#comparison" class="hover:text-cyan-400 transition">Comparison</a>
-            <a href="#roadmap" class="hover:text-cyan-400 transition">Roadmap</a>
-        </div>
-
-        <a href="#architecture" class="px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white text-xs font-semibold rounded-lg shadow-lg shadow-cyan-500/20 transition flex items-center gap-2">
-            <span>Explore Tech</span>
-            <i data-lucide="arrow-right" class="w-4 h-4"></i>
-        </a>
+    <!-- Desktop nav -->
+    <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+      <a href="#hero" class="hover:text-cyan-400 transition">Overview</a>
+      <a href="#challenges" class="hover:text-cyan-400 transition">Challenges</a>
+      <a href="#solution" class="hover:text-cyan-400 transition">Solution</a>
+      <a href="#architecture" class="hover:text-cyan-400 transition">Tech Architecture</a>
+      <a href="#comparison" class="hover:text-cyan-400 transition">Comparison</a>
+      <a href="#roadmap" class="hover:text-cyan-400 transition">Roadmap</a>
     </nav>
 
-    <!-- HERO SECTION -->
-    <section id="hero" class="relative pt-36 pb-16 px-6 max-w-7xl mx-auto text-center overflow-hidden">
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none"></div>
+    <!-- CTA + Mobile toggle -->
+    <div class="flex items-center gap-3">
+      <a href="#architecture" class="hidden md:inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-500 hover:to-cyan-400 text-white text-xs font-semibold rounded-lg shadow-lg glow-card">
+        <span>Explore Tech</span>
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3 h-3" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" /></svg>
+      </a>
 
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900 border border-slate-800 text-xs text-cyan-400 mb-6">
-            <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
-            Smart India Hackathon • Team resQ | CS AIML (1st Year) | 6 Members[span_0](start_span)[span_0](end_span)
-        </div>
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-button" class="md:hidden p-2 rounded-md hover:bg-slate-800/60" aria-label="Toggle menu" aria-expanded="false">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-300" fill="none" viewBox="0 0 24 24" stroke="currentColor" id="hamburger-icon">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
 
-        <h1 class="text-4xl md:text-6xl font-black text-slate-100 max-w-5xl mx-auto leading-tight">
-            resQ: AI-Powered Intelligent <br />
-            <span class="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-300 bg-clip-text text-transparent">
-                Disaster Response System[span_1](start_span)[span_1](end_span)
-            </span>
-        </h1>
-
-        <p class="mt-6 text-slate-400 text-base md:text-lg max-w-3xl mx-auto leading-relaxed">
-            Next-Generation Predictive Analytics, Autonomous Thermal Drones, & Offline Emergency Mesh Network for Disaster Mitigation[span_2](start_span)[span_2](end_span).
-        </p>
-
-        <!-- Key Target Impact Metrics -->
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12 max-w-4xl mx-auto">
-            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 glow-card">
-                <h3 class="text-4xl font-extrabold text-cyan-400">70%[span_3](start_span)[span_3](end_span)</h3>
-                <p class="text-sm font-semibold text-slate-200 mt-1">Faster Rescue Speed[span_4](start_span)[span_4](end_span)</p>
-                <p class="text-xs text-slate-400 mt-1">Reduces victim localization time from hours to minutes using aerial thermal AI scanning[span_5](start_span)[span_5](end_span).</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 glow-card">
-                <h3 class="text-4xl font-extrabold text-blue-400">100%[span_6](start_span)[span_6](end_span)</h3>
-                <p class="text-sm font-semibold text-slate-200 mt-1">Offline Mesh Uptime[span_7](start_span)[span_7](end_span)</p>
-                <p class="text-xs text-slate-400 mt-1">Guaranteed emergency SMS distress network even during total grid failure[span_8](start_span)[span_8](end_span).</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-900/60 border border-slate-800 glow-card">
-                <h3 class="text-4xl font-extrabold text-teal-400">95%[span_9](start_span)[span_9](end_span)</h3>
-                <p class="text-sm font-semibold text-slate-200 mt-1">Supply Accuracy[span_10](start_span)[span_10](end_span)</p>
-                <p class="text-xs text-slate-400 mt-1">Eliminates duplicate relief distribution via automated GPS-tracked supply chain[span_11](start_span)[span_11](end_span).</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- MAJOR CHALLENGES & GOVT GAPS -->
-    <section id="challenges" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900">
-        <div class="text-center mb-12">
-            <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">Problem Identification</h2>
-            <p class="text-3xl font-bold text-slate-100 mt-2">Disaster Challenges & Government Gaps[span_12](start_span)[span_12](end_span)</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
-                <i data-lucide="clock" class="w-8 h-8 text-red-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-slate-200">Delayed Early Warnings[span_13](start_span)[span_13](end_span)</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">Lack of real-time, localized disaster predictions for cloudbursts, flash floods, and landslides, leading to zero preparation time for citizens[span_14](start_span)[span_14](end_span).</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
-                <i data-lucide="wifi-off" class="w-8 h-8 text-amber-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-slate-200">Network Blackouts[span_15](start_span)[span_15](end_span)</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">Standard cellular and internet towers collapse during natural calamities, creating total communication blackout in affected zones[span_16](start_span)[span_16](end_span).</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
-                <i data-lucide="package-x" class="w-8 h-8 text-orange-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-slate-200">Mismanaged Relief Supply[span_17](start_span)[span_17](end_span)</h3>
-                <p class="text-xs text-slate-400 mt-2 leading-relaxed">Inefficient manual distribution leads to bottlenecks, hoardings, and delayed medical aid reaching victims in high-priority disaster pockets[span_18](start_span)[span_18](end_span).</p>
-            </div>
-        </div>
-
-        <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
-            <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-4">Current Government System Gaps[span_19](start_span)[span_19](end_span)</h3>
-            <div class="grid md:grid-cols-2 gap-4 text-xs text-slate-400">
-                <div class="flex items-start gap-2">
-                    <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 shrink-0 mt-0.5"></i>
-                    <p><strong class="text-slate-200">Over-Reliance on Reactive Measures:</strong> Focus is on post-disaster compensation and rescue rather than proactive AI-driven prevention[span_20](start_span)[span_20](end_span).</p>
-                </div>
-                <div class="flex items-start gap-2">
-                    <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 shrink-0 mt-0.5"></i>
-                    <p><strong class="text-slate-200">Failure in Last-Mile Execution:</strong> High-level policy decisions and warnings fail to filter down swiftly to village Panchayats and rural first-responders[span_21](start_span)[span_21](end_span).</p>
-                </div>
-                <div class="flex items-start gap-2">
-                    <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 shrink-0 mt-0.5"></i>
-                    <p><strong class="text-slate-200">Unplanned Infrastructure:</strong> Lax enforcement on riverbed encroachments and mountain road construction increases flood/landslide severity[span_22](start_span)[span_22](end_span).</p>
-                </div>
-                <div class="flex items-start gap-2">
-                    <i data-lucide="alert-circle" class="w-4 h-4 text-red-500 shrink-0 mt-0.5"></i>
-                    <p><strong class="text-slate-200">Lack of Citizen Drill Protocols:</strong> Minimal community-level mock drills leave citizens unaware of immediate survival steps during calamities[span_23](start_span)[span_23](end_span).</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SOLUTION OVERVIEW & EFFICIENCY -->
-    <section id="solution" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900 bg-slate-900/30">
-        <div class="text-center mb-12">
-            <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">The resQ Solution</h2>
-            <p class="text-3xl font-bold text-slate-100 mt-2">Unified AIML Emergency Platform[span_24](start_span)[span_24](end_span)</p>
-        </div>
-
-        <div class="grid md:grid-cols-3 gap-6 mb-12">
-            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-                <i data-lucide="brain" class="w-8 h-8 text-cyan-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-slate-200">Early Warning AI[span_25](start_span)[span_25](end_span)</h3>
-                <p class="text-xs text-slate-400 mt-2">ML algorithms analyze satellite telemetry and river sensors to predict floods 6 hours in advance[span_26](start_span)[span_26](end_span).</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-                <i data-lucide="scan" class="w-8 h-8 text-blue-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-slate-200">Autonomous Thermal Drones[span_27](start_span)[span_27](end_span)</h3>
-                <p class="text-xs text-slate-400 mt-2">Computer vision models locate trapped human bodies in earthquake debris and flood waters[span_28](start_span)[span_28](end_span).</p>
-            </div>
-            <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
-                <i data-lucide="share-2" class="w-8 h-8 text-teal-400 mb-3"></i>
-                <h3 class="text-lg font-bold text-slate-200">Decentralized Mesh Sync[span_29](start_span)[span_29](end_span)</h3>
-                <p class="text-xs text-slate-400 mt-2">Keeps rescue teams connected even during cellular grid collapse via ad-hoc P2P network[span_30](start_span)[span_30](end_span).</p>
-            </div>
-        </div>
-
-        <!-- Relief Response Efficiency Bar -->
-        <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800">
-            <h3 class="text-sm font-bold text-slate-200 mb-4">Relief Response Efficiency Comparison[span_31](start_span)[span_31](end_span)</h3>
-            <div class="space-y-4">
-                <div>
-                    <div class="flex justify-between text-xs font-medium mb-1">
-                        <span class="text-cyan-400">resQ AI Emergency System[span_32](start_span)[span_32](end_span)</span>
-                        <span class="text-cyan-400">92% Efficiency[span_33](start_span)[span_33](end_span)</span>
-                    </div>
-                    <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-                        <div class="bg-cyan-400 h-full rounded-full" style="width: 92%"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="flex justify-between text-xs font-medium mb-1">
-                        <span class="text-slate-400">Integrated Municipal App[span_34](start_span)[span_34](end_span)</span>
-                        <span class="text-slate-400">60% Efficiency[span_35](start_span)[span_35](end_span)</span>
-                    </div>
-                    <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-                        <div class="bg-slate-500 h-full rounded-full" style="width: 60%"></div>
-                    </div>
-                </div>
-                <div>
-                    <div class="flex justify-between text-xs font-medium mb-1">
-                        <span class="text-slate-500">Traditional Manual Relief[span_36](start_span)[span_36](end_span)</span>
-                        <span class="text-slate-500">35% Efficiency[span_37](start_span)[span_37](end_span)</span>
-                    </div>
-                    <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
-                        <div class="bg-slate-700 h-full rounded-full" style="width: 35%"></div>
-                    </div>
-                </div>
-            </div>
-            <p class="text-xs text-slate-400 mt-4">resQ increases rescue response efficiency by over 2.5x compared to conventional manual methods by eliminating communication lag[span_38](start_span)[span_38](end_span).</p>
-        </div>
-    </section>
-
-    <!-- TECHNICAL SYSTEM ARCHITECTURE -->
-    <section id="architecture" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900">
-        <div class="text-center mb-12">
-            <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">System Specifications</h2>
-            <p class="text-3xl font-bold text-slate-100 mt-2">Technical System Architecture[span_39](start_span)[span_39](end_span)</p>
-        </div>
-
-        <div class="grid md:grid-cols-2 gap-8 items-center">
-            <div class="space-y-4">
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
-                    <h4 class="font-bold text-slate-200 text-sm">AI & Data Intelligence Layer[span_40](start_span)[span_40](end_span)</h4>
-                    <p class="text-xs text-slate-400 mt-1">Utilizes Convolutional Neural Networks (CNN) for aerial debris scanning and LSTM models for flood level predictions[span_41](start_span)[span_41](end_span).</p>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
-                    <h4 class="font-bold text-slate-200 text-sm">Hardware & IoT Grid[span_42](start_span)[span_42](end_span)</h4>
-                    <p class="text-xs text-slate-400 mt-1">Deployed on low-power LoRaWAN nodes and Raspberry Pi edge devices connected to water pressure and vibration sensors[span_43](start_span)[span_43](end_span).</p>
-                    <ul class="text-xs text-cyan-400 mt-2 space-y-1">
-                        <li>✓ Real-time Telemetry: Sub-second sensor data aggregation[span_44](start_span)[span_44](end_span)</li>
-                        <li>✓ Edge Inference: AI models execute directly on-drone without cloud[span_45](start_span)[span_45](end_span)</li>
-                    </ul>
-                </div>
-                <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
-                    <h4 class="font-bold text-slate-200 text-sm">Offline Mesh Communication (Zero Grid Reliance)[span_46](start_span)[span_46](end_span)</h4>
-                    <p class="text-xs text-slate-400 mt-1">Creates an ad-hoc peer-to-peer LoRa mesh network spanning up to 15 kilometers[span_47](start_span)[span_47](end_span). Smartphone distress signals hop through nodes to reach the central command center without active internet[span_48](start_span)[span_48](end_span).</p>
-                </div>
-            </div>
-
-            <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 font-mono text-xs">
-                <span class="text-slate-500">// Mathematical Risk Engine Equation[span_49](start_span)[span_49](end_span)</span>
-                <div class="my-4 text-cyan-300 bg-slate-900 p-4 rounded-lg border border-slate-800 text-center text-sm font-bold">
-                    P(Risk) = Σ(w_i * S_i) / (1 + e^(-a * I))[span_50](start_span)[span_50](end_span)
-                </div>
-                <p class="text-slate-400 text-[11px] leading-relaxed">
-                    Where <span class="text-cyan-400">w_i</span> represents weights, <span class="text-cyan-400">S_i</span> represents sub-second telemetry sensor values (water pressure, vibration, satellite data), and <span class="text-cyan-400">I</span> represents intensity adjustments[span_51](start_span)[span_51](end_span).
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- COMPARATIVE SOLUTION ANALYSIS -->
-    <section id="comparison" class="py-16 px-6 max-w-7xl mx-auto border-t border-slate-900">
-        <div class="text-center mb-12">
-            <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">Benchmarking</h2>
-            <p class="text-3xl font-bold text-slate-100 mt-2">Comparative Solution Analysis[span_52](start_span)[span_52](end_span)</p>
-        </div>
-
-        <div class="overflow-x-auto">
-            <table class="w-full text-left border-collapse min-w-[600px] text-xs">
-                <thead>
-                    <tr class="border-b border-slate-800 text-slate-400">
-                        <th class="p-4">Feature / Capability[span_53](start_span)[span_53](end_span)</th>
-                        <th class="p-4">Traditional System[span_54](start_span)[span_54](end_span)</th>
-                        <th class="p-4">Existing Govt Apps[span_55](start_span)[span_55](end_span)</th>
-                        <th class="p-4 text-cyan-400 font-bold">resQ AI Platform[span_56](start_span)[span_56](end_span)</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divi
+<!-- Mobile menu panel -->
+<div id="mobile-menu-panel" class="md:hidden hidden border-t border-slate-800/60 bg-slate-950/95">
+  <div class="px-4 py-4 space-y-2">
+    <a href="#hero" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Overview</a>
+    <a href="#challenges" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Challenges</a>
+    <a href="#solution" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Solution</a>
+    <a href="#architecture" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Tech Architecture</a>
+    <a href="#comparison" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Comparison</a>
+    <a href="#roadmap" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Roadmap</a>
+  </div>
+</div>
