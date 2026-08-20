@@ -56,3 +56,394 @@
     <a href="#roadmap" class="block px-3 py-2 rounded-md text-base font-medium text-slate-200 hover:bg-slate-900">Roadmap</a>
   </div>
 </div>
+<!-- HERO -->
+<section id="hero" class="relative pt-16 pb-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center overflow-hidden">
+  <div class="absolute -top-10 left-1/2 -translate-x-1/2 w-[36rem] h-[36rem] bg-cyan-500/6 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-900/60 border border-slate-800 text-xs text-cyan-400 mb-6">
+    <span class="flex h-2 w-2 rounded-full bg-cyan-400 animate-pulse"></span>
+    Smart India Hackathon • Team resQ — AI for Rapid Disaster Response
+  </div>
+
+  <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight max-w-4xl mx-auto">
+    resQ — AI-driven Intelligent Disaster Response for Faster, Safer, and Smarter Rescue
+  </h1>
+
+  <p class="mt-4 text-slate-400 max-w-3xl mx-auto text-sm sm:text-base">
+    Next-generation predictive analytics, autonomous thermal drones, and an offline emergency mesh network designed to reduce casualties and speed relief distribution.
+  </p>
+
+  <!-- Impact metric cards -->
+  <div class="mt-10 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-4xl mx-auto">
+    <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-3xl font-extrabold text-cyan-400">70%</div>
+          <div class="text-xs text-slate-300 font-semibold mt-1">Faster Rescue Speed</div>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="clock" class="w-6 h-6 text-rose-400"></i>
+        </div>
+      </div>
+      <p class="mt-3 text-[13px] text-slate-400">Reduces victim localization from hours to minutes using aerial thermal AI scanning and prioritised route planning.</p>
+    </div>
+
+    <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-3xl font-extrabold text-blue-400">100%</div>
+          <div class="text-xs text-slate-300 font-semibold mt-1">Offline Mesh Uptime</div>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="wifi-off" class="w-6 h-6 text-amber-400"></i>
+        </div>
+      </div>
+      <p class="mt-3 text-[13px] text-slate-400">Guaranteed local SMS/distress network via LoRa/mesh when cellular and internet infrastructure fail.</p>
+    </div>
+
+    <div class="p-5 rounded-2xl bg-slate-900/50 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-3xl font-extrabold text-teal-400">95%</div>
+          <div class="text-xs text-slate-300 font-semibold mt-1">Supply Accuracy</div>
+        </div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="package" class="w-6 h-6 text-orange-400"></i>
+        </div>
+      </div>
+      <p class="mt-3 text-[13px] text-slate-400">Eliminates duplicate or missed relief distribution using GPS-tracked supply chains and ID-linked allocations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CHALLENGES & GAPS -->
+<section id="challenges" class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+  <div class="text-center mb-10">
+    <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">Problem Identification</h2>
+    <p class="text-2xl md:text-3xl font-bold text-slate-100 mt-2">Disaster Challenges & Government Gaps</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <article class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+      <div class="flex items-start gap-4">
+        <i data-lucide="alert-triangle" class="w-8 h-8 text-red-400"></i>
+        <div>
+          <h3 class="text-lg font-bold text-slate-200">Delayed Early Warnings</h3>
+          <p class="mt-2 text-xs text-slate-400">Lack of localized, real-time predictions for flash floods, cloudbursts and landslides prevents timely evacuations. Current forecasting is coarse-grained and slow to reach local stakeholders.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+      <div class="flex items-start gap-4">
+        <i data-lucide="wifi-off" class="w-8 h-8 text-amber-400"></i>
+        <div>
+          <h3 class="text-lg font-bold text-slate-200">Network Blackouts</h3>
+          <p class="mt-2 text-xs text-slate-400">Cell towers and fiber are often downed during severe events, creating communication blackholes that block distress signalling, situational updates and coordination between agencies.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="p-6 rounded-2xl bg-slate-900/40 border border-slate-800">
+      <div class="flex items-start gap-4">
+        <i data-lucide="box" class="w-8 h-8 text-orange-400"></i>
+        <div>
+          <h3 class="text-lg font-bold text-slate-200">Mismanaged Relief Supply</h3>
+          <p class="mt-2 text-xs text-slate-400">Manual distribution and poor tracking lead to hoarding, duplication, and missed high-priority cases. Lack of a verified last-mile process undermines fairness and speed.</p>
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="p-6 rounded-2xl bg-slate-900/80 border border-slate-800">
+    <h3 class="text-sm font-bold text-slate-300 uppercase tracking-wider mb-4">Current Government System Gaps</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs text-slate-400">
+      <div class="flex items-start gap-3">
+        <i data-lucide="slash" class="w-4 h-4 text-red-500 mt-1"></i>
+        <div>
+          <strong class="text-slate-200">Over-Reliance on Reactive Measures:</strong>
+          <div class="mt-1">Policy focus and funding often target post-disaster rescue and compensation rather than continuous monitoring, localized early-warning systems and AI-driven proactive mitigation.</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <i data-lucide="map-pin" class="w-4 h-4 text-red-500 mt-1"></i>
+        <div>
+          <strong class="text-slate-200">Last-Mile Execution Failure:</strong>
+          <div class="mt-1">National and state directives frequently fail to reach Panchayats and remote field teams in time; there is no standardized drill or distribution protocol in many rural areas.</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <i data-lucide="tool" class="w-4 h-4 text-red-500 mt-1"></i>
+        <div>
+          <strong class="text-slate-200">Unplanned Infrastructure:</strong>
+          <div class="mt-1">Unregulated construction in floodplains and steep slopes increases disaster severity; enforcement and monitoring are inconsistent.</div>
+        </div>
+      </div>
+
+      <div class="flex items-start gap-3">
+        <i data-lucide="users" class="w-4 h-4 text-red-500 mt-1"></i>
+        <div>
+          <strong class="text-slate-200">Lack of Citizen Drill Protocols:</strong>
+          <div class="mt-1">Few communities conduct regular, realistic drills; citizens are thus often unaware of immediate survival and assembly steps during calamities.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOLUTION OVERVIEW -->
+<section id="solution" class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900 bg-slate-900/10">
+  <div class="text-center mb-10">
+    <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">The resQ Solution</h2>
+    <p class="text-2xl md:text-3xl font-bold text-slate-100 mt-2">Unified AIML Emergency Platform</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+      <i data-lucide="cpu" class="w-8 h-8 text-cyan-400 mb-3"></i>
+      <h3 class="text-lg font-bold text-slate-200">Early Warning AI</h3>
+      <p class="mt-2 text-xs text-slate-400">ML models ingest satellite telemetry, river sensors and local weather feeds to predict floods and landslides hours in advance, enabling targeted evacuations.</p>
+    </div>
+
+    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+      <i data-lucide="thermometer" class="w-8 h-8 text-blue-400 mb-3"></i>
+      <h3 class="text-lg font-bold text-slate-200">Autonomous Thermal Drones</h3>
+      <p class="mt-2 text-xs text-slate-400">Onboard computer vision and thermal imaging identify trapped or injured persons in debris or flood waters for prioritized rescue routing and live mapping.</p>
+    </div>
+
+    <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+      <i data-lucide="share-2" class="w-8 h-8 text-teal-400 mb-3"></i>
+      <h3 class="text-lg font-bold text-slate-200">Decentralized Mesh Sync</h3>
+      <p class="mt-2 text-xs text-slate-400">LoRa-based P2P mesh and smartphone relays keep rescue teams and volunteers connected even when cellular infrastructure is down.</p>
+    </div>
+  </div>
+
+  <!-- Relief Response Efficiency Progress Bars -->
+  <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800">
+    <h3 class="text-sm font-bold text-slate-200 mb-4">Relief Response Efficiency Comparison</h3>
+
+    <div class="space-y-5">
+      <div>
+        <div class="flex justify-between text-xs font-medium mb-1">
+          <span class="text-cyan-400">resQ AI Emergency System</span>
+          <span class="text-cyan-400">92% Efficiency</span>
+        </div>
+        <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
+          <div class="bg-cyan-400 h-full rounded-full" style="width:92%"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-xs font-medium mb-1">
+          <span class="text-slate-400">Integrated Municipal App</span>
+          <span class="text-slate-400">60% Efficiency</span>
+        </div>
+        <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
+          <div class="bg-slate-500 h-full rounded-full" style="width:60%"></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="flex justify-between text-xs font-medium mb-1">
+          <span class="text-slate-500">Traditional Manual Relief</span>
+          <span class="text-slate-500">35% Efficiency</span>
+        </div>
+        <div class="w-full bg-slate-800 h-3 rounded-full overflow-hidden">
+          <div class="bg-slate-700 h-full rounded-full" style="width:35%"></div>
+        </div>
+      </div>
+
+      <p class="text-xs text-slate-400 mt-4">By combining predictive analytics, automated search & rescue, and resilient mesh communications, resQ aims to increase rescue response efficiency by more than 2.5× compared to conventional methods.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TECH ARCHITECTURE -->
+<section id="architecture" class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+  <div class="text-center mb-10">
+    <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">System Specifications</h2>
+    <p class="text-2xl md:text-3xl font-bold text-slate-100 mt-2">Technical System Architecture</p>
+  </div>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+    <div class="space-y-4">
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <h4 class="font-bold text-slate-200 text-sm">AI & Data Intelligence Layer</h4>
+        <p class="mt-2 text-xs text-slate-400">Utilizes Convolutional Neural Networks (CNN) for aerial debris/thermal target detection and LSTM models for time-series flood-level forecasting. Ensemble models combine telemetry and meteorological forecasts for localized alerts.</p>
+        <ul class="mt-3 text-xs text-cyan-400 space-y-1">
+          <li>✓ CNN for thermal/visual person detection on drones</li>
+          <li>✓ LSTM/GRU for short-horizon flood prediction (sub-hour)</li>
+          <li>✓ Model compression & edge inference (TinyML / ONNX runtimes)</li>
+        </ul>
+      </div>
+
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <h4 class="font-bold text-slate-200 text-sm">Hardware & IoT Grid</h4>
+        <p class="mt-2 text-xs text-slate-400">Low-power LoRaWAN nodes and Raspberry Pi / Jetson Nano edge devices aggregate water pressure, vibration and rainfall telemetry with local preprocessing and event-driven uploads.</p>
+        <ul class="mt-3 text-xs text-cyan-400 space-y-1">
+          <li>✓ Sub-second telemetry aggregation where connectivity permits</li>
+          <li>✓ Edge inference on drones and gateways to reduce latency</li>
+        </ul>
+      </div>
+
+      <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
+        <h4 class="font-bold text-slate-200 text-sm">Offline Mesh Communication</h4>
+        <p class="mt-2 text-xs text-slate-400">Ad-hoc P2P LoRa mesh with opportunistic smartphone relays and portable gateways ensures message relay up to ~15 km in cooperative deployments. Prioritised distress messages use compact encodings for efficiency.</p>
+      </div>
+    </div>
+
+    <div class="p-6 rounded-2xl bg-slate-950 border border-slate-800 font-mono text-xs">
+      <div class="text-slate-500">// Mathematical Risk Engine Equation</div>
+      <div class="my-4 text-cyan-300 bg-slate-900 p-4 rounded-lg border border-slate-800 text-center text-sm font-bold">
+        P(Risk) = Σ_i (w_i * S_i) / (1 + e^( -a * I ))
+      </div>
+      <p class="text-slate-400 text-[12px] leading-relaxed">
+        Where <span class="text-cyan-400">w_i</span> are feature weights (learned & calibrated), <span class="text-cyan-400">S_i</span> are normalized sensor signals (pressure, vibration, river-level), and <span class="text-cyan-400">I</span> is an aggregated environmental intensity index. Logistic scaling ensures bounded probability outputs for prioritisation.
+      </p>
+
+      <div class="mt-6 grid grid-cols-1 gap-3 text-xs">
+        <div class="p-3 rounded-md bg-slate-900 border border-slate-800">
+          <div class="flex justify-between">
+            <span class="text-slate-300">Edge Model Size</span>
+            <span class="text-cyan-300 font-semibold">< 10MB (quantized)</span>
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">Optimized for drone/edge deployment with on-device inference.</div>
+        </div>
+
+        <div class="p-3 rounded-md bg-slate-900 border border-slate-800">
+          <div class="flex justify-between">
+            <span class="text-slate-300">Mesh Range</span>
+            <span class="text-cyan-300 font-semibold">Up to 15 km (coop.)</span>
+          </div>
+          <div class="text-[11px] text-slate-400 mt-1">LoRa + smartphone relays for flexible coverage.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMPARISON -->
+<section id="comparison" class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+  <div class="text-center mb-8">
+    <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">Benchmarking</h2>
+    <p class="text-2xl md:text-3xl font-bold text-slate-100 mt-2">Comparative Solution Analysis</p>
+  </div>
+
+  <div class="overflow-x-auto bg-slate-900/30 rounded-xl border border-slate-800">
+    <table class="w-full min-w-[720px] text-left text-xs">
+      <thead>
+        <tr class="border-b border-slate-800 text-slate-400">
+          <th class="p-4">Feature / Capability</th>
+          <th class="p-4">Traditional System</th>
+          <th class="p-4">Existing Govt Apps</th>
+          <th class="p-4 text-cyan-300 font-bold">resQ AI Platform</th>
+        </tr>
+      </thead>
+      <tbody class="divide-y divide-slate-800">
+        <tr>
+          <td class="p-4 align-top">Early Warning Granularity</td>
+          <td class="p-4 text-slate-400">Regional, delayed</td>
+          <td class="p-4 text-slate-400">Improved, but dependent on connectivity</td>
+          <td class="p-4 text-slate-200">Hyperlocal, real-time (edge + ensemble models)</td>
+        </tr>
+
+        <tr>
+          <td class="p-4 align-top">Search & Rescue</td>
+          <td class="p-4 text-slate-400">Manual teams, time-consuming</td>
+          <td class="p-4 text-slate-400">Limited drone integration</td>
+          <td class="p-4 text-slate-200">Autonomous thermal drones with live mapping and priority queues</td>
+        </tr>
+
+        <tr>
+          <td class="p-4 align-top">Communication Resilience</td>
+          <td class="p-4 text-slate-400">Breaks when infrastructure fails</td>
+          <td class="p-4 text-slate-400">Fallbacks limited</td>
+          <td class="p-4 text-slate-200">LoRa mesh + smartphone relays with prioritized distress routing</td>
+        </tr>
+
+        <tr>
+          <td class="p-4 align-top">Supply Distribution</td>
+          <td class="p-4 text-slate-400">Manual, duplicated</td>
+          <td class="p-4 text-slate-400">Partially digitised but limited verification</td>
+          <td class="p-4 text-slate-200">GPS-tracked chains, ID-backed allocations, realtime audit</td>
+        </tr>
+
+        <tr>
+          <td class="p-4 align-top">Typical Efficiency</td>
+          <td class="p-4 text-slate-400">~35%</td>
+          <td class="p-4 text-slate-400">~60%</td>
+          <td class="p-4 text-cyan-300 font-bold">~92%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmap" class="py-14 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-900">
+  <div class="text-center mb-8">
+    <h2 class="text-xs font-semibold text-cyan-400 tracking-widest uppercase">Product Roadmap</h2>
+    <p class="text-2xl md:text-3xl font-bold text-slate-100 mt-2">4-Phase Development Plan</p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-4 gap-6">
+    <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-sm font-semibold text-amber-300 uppercase">Phase 1</div>
+          <h4 class="font-bold text-slate-200 mt-2">MVP & Pilot Deployment</h4>
+        </div>
+        <div class="text-xs text-slate-400">Q1</div>
+      </div>
+      <p class="mt-3 text-xs text-slate-400">Core AI models, drone PoC, mesh gateways and a lightweight command UI — pilot in 1-2 districts.</p>
+    </div>
+
+    <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-sm font-semibold text-amber-300 uppercase">Phase 2</div>
+          <h4 class="font-bold text-slate-200 mt-2">Model Optimization & Edge</h4>
+        </div>
+        <div class="text-xs text-slate-400">Q2</div>
+      </div>
+      <p class="mt-3 text-xs text-slate-400">Quantized models for on-drone inference, extended mesh range and automated priority dispatch logic.</p>
+    </div>
+
+    <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-sm font-semibold text-amber-300 uppercase">Phase 3</div>
+          <h4 class="font-bold text-slate-200 mt-2">Scale & Integrations</h4>
+        </div>
+        <div class="text-xs text-slate-400">Q3</div>
+      </div>
+      <p class="mt-3 text-xs text-slate-400">Integrate with municipal systems, add verified supply-chain modules and multi-agency dashboards.</p>
+    </div>
+
+    <div class="p-5 rounded-2xl bg-slate-900 border border-slate-800 glow-card">
+      <div class="flex items-center justify-between">
+        <div>
+          <div class="text-sm font-semibold text-amber-300 uppercase">Phase 4</div>
+          <h4 class="font-bold text-slate-200 mt-2">Nationwide Readiness</h4>
+        </div>
+        <div class="text-xs text-slate-400">Q4+</div>
+      </div>
+      <p class="mt-3 text-xs text-slate-400">Full production readiness, policy partnerships, and formalized community drill programs.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-10 px-4 sm:px-6 lg:px-8 mt-10 border-t border-slate-900">
+  <div class="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-4">
+    <div class="text-sm text-slate-400">© resQ — AI-Powered Disaster Response · Smart India Hackathon</div>
+    <div class="flex items-center gap-4">
+      <a href="#hero" class="text-xs text-slate-300 hover:text-cyan-300">Overview</a>
+      <a href="#roadmap" class="text-xs text-slate-300 hover:text-cyan-300">Roadmap</a>
+      <a href="#" class="text-xs text-slate-300 hover:text-cyan-300">Privacy</a>
+    </div>
+  </div>
+</footer>
